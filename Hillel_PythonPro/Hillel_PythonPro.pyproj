@@ -38,17 +38,17 @@
   <ItemGroup>
     <Content Include="01\notes01.md" />
     <Content Include="01\lesson01.md" />
-    <Content Include="01\readme 01.md" />
-    <Content Include="02\readme.md" />
+    <Content Include="01\README.md" />
+    <Content Include="02\README.md" />
     <Content Include="02\lesson02.md" />
     <Content Include="02\notes03.md" />
     <Content Include="03\README.md" />
     <Content Include="03\lesson03.md" />
     <Content Include="03\notes03.md" />
-    <Content Include="04\task04.md" />
+    <Content Include="04\README.md" />
     <Content Include="04\lesson04.md" />
     <Content Include="04\notes04.md" />
-    <Content Include="05\task05.md" />
+    <Content Include="05\README.md" />
     <Content Include="05\lesson05.md" />
     <Content Include="05\notes05.md" />
     <Content Include="README.md" />
