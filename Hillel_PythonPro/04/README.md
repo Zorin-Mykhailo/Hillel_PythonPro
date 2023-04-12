@@ -1,4 +1,4 @@
-﻿[Homework 04 • Functions](https://lms.ithillel.ua/groups/63c0179f2482232c29371552/homeworks/64345db808979c26b1979645)
+﻿# [Homework 04 • Functions](https://lms.ithillel.ua/groups/63c0179f2482232c29371552/homeworks/64345db808979c26b1979645)
 
 - [ ] Functions from [this file](https://github.com/parfeniukink/hillel_04_2022/blob/main/lesson_4/2.py) are completed according to the requirements that were discussed at the end of the lesson
 
