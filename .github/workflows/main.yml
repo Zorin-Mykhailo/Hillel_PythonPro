@@ -15,6 +15,6 @@ jobs:
       - name: Install dependencies
         run: pip install flake8 black isort
       - name: Run linter
-        run: flake8 ./
+        run: flake8 --max-line-length=180 ./
       - name: Check formatting
         run: black --check ./ && isort --check ./

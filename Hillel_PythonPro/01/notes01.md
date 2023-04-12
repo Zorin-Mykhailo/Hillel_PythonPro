@@ -1,0 +1,1 @@
+﻿# Notes 01• Introduction. Python basics
