@@ -8,6 +8,6 @@ For completing this homework you have to download the [rockyou file](https://www
 
 - [x] When the app runs it asks for user input which describes the search word
 - [x] After the user had entered the value - all lines from the `rockyou.txt` file which include the requested line are added to the new file called `results.txt`
-- [ ] Once the file is created the user sees the next information in the Console:
+- [x] Once the file is created the user sees the next information in the Console:
     - [x] The number of lines of a cerated file;
-    - [ ] The total size of the created file (use [Pympler 3-rd party library](https://pympler.readthedocs.io/en/latest/#usage-examples)).
+    - [x] `⚠️1` The total size of the created file (use [Pympler 3-rd party library](https://pympler.readthedocs.io/en/latest/#usage-examples)).
