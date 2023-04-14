@@ -4,7 +4,7 @@ from sys import getsizeof
 
 
 def get_data_dir_path():
-    data_dir_path = os.path.abspath(os.getcwd( ) + '../../.data/')
+    data_dir_path = os.path.abspath(os.getcwd() + '../../.data/')
     if not os.path.exists(data_dir_path):
         os.makedirs(data_dir_path)
     return data_dir_path
@@ -47,18 +47,17 @@ def main():
     founded_lines = 0
     with open(file=results_file_path, mode="w", encoding="utf-8", newline="\n") as file:
         for e in find_in_file(file_path=rockyou_file_path, word=word):
-            file.write(e+"\n")        
+            file.write(e+"\n")
             founded_lines += 1
-    
+
     print(f'Founded {founded_lines} lines')
     print(f'Results stored in file "{results_file_path}"')
     print(f'File size (on disk): {os.path.getsize(results_file_path)} bytes')
-    
+
     print(f'sys.getsizeof   (file): {getsizeof(file)}')
     print(f'pympler.azizeof (file): {asizeof.asized(file)}')
-    
-    input('\nTo exit program press "Enter"')
 
+    input('\nTo exit program press "Enter"')
 
 
 if __name__ == "__main__":
