@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e345418e-4536-4f31-a34b-35c1f19099b3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>03\homework03.py</StartupFile>
+    <StartupFile>04\homework04.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="03\homework03.py" />
+    <Compile Include="04\class1.py" />
+    <Compile Include="04\homework04.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="..\..\..\..\..\.virtualenvs\Hillel_PythonPro--TrZOL7W\">

@@ -1,17 +1,33 @@
-﻿# [Homework 04 • Functions](https://lms.ithillel.ua/groups/63c0179f2482232c29371552/homeworks/64345db808979c26b1979645)
+﻿from typing import Any
 
-- [ ] Functions from [this file](https://github.com/parfeniukink/hillel_04_2022/blob/main/lesson_4/2.py) are completed according to the requirements that were discussed at the end of the lesson
+NAME = 'name'
+AGE = 'age'
+NUMB = 'number'
 
-```python
-from typing import Any
 
+def get_name(player: dict, default: str = ""):
+    return player[NAME] if NAME in player else default
+
+def get_age(player: dict, default: int | None = None):
+    return player[AGE] if AGE in player else default
+
+def get_numb(player: dict, default: int | None = None):
+    return player[NUMB] if NUMB in player else default
+
+
+def player_repr(player: dict, verbose: bool) -> str:
+    return f'{get_numb(player):>5} │ {get_name(player):30} │ {get_age(player):>3} '
+    
+    
 
 def players_repr(players: list[dict], verbose: bool) -> None:
     if verbose:
-        print(">>>> TEAM:")
-
+        header: str = f'Players ({len(players)})' 
+        print(f'{header:^40}')
+    return f'{get_numb(player):>5} │ {get_name(player):30} │ {get_age(player):>3} '
     for player in players:
-        print(f"{player['name']=}, {player['age']=}")
+        print(player_repr(player, verbose))
+        #print(f"{player['name']=}, {player['age']=}")
 
 
 def players_add(players: list[dict], player: dict) -> list[dict]:
@@ -37,6 +53,9 @@ def main():
         {"name": "Cavin", "age": 33, "number": 12},
     ]
 
+    players_repr(team, True)
+    return
+
     players_33: list[dict] = players_find(players=team, field="age", value=33)
 
     options = ["repr", "add", "del", "find", "get", "exit"]
@@ -50,7 +69,5 @@ def main():
             ...
 
 
-
 if __name__ == "__main__":
     main()
-```
