@@ -1,5 +1,5 @@
-﻿from datetime import datetime, date
-import re
+﻿import re
+from datetime import date, datetime
 
 
 class ColumnInfo:
