@@ -62,7 +62,10 @@
     <Content Include="07\README.md" />
     <Content Include="08\notes07.md" />
     <Content Include="08\README.md" />
+    <Content Include="09\lesson09.md" />
+    <Content Include="09\notes09.md" />
     <Content Include="README.md" />
+    <Content Include="09\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01\" />
@@ -73,6 +76,7 @@
     <Folder Include="06\" />
     <Folder Include="07\" />
     <Folder Include="08\" />
+    <Folder Include="09\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
