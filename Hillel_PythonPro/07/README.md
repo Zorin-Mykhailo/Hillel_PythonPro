@@ -7,8 +7,7 @@ Unfortunately, the person you are replacing didn't use classes for some reason. 
 Here is a code example:
 
 ```python
-# each social channel has a type
-# and the current number of followers
+# each social channel has a type and the current number of followers
 SocialChannel = tuple[str, int] = 
 
 # each post has a message and the timestamp when it should be posted

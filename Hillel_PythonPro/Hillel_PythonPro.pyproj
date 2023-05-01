@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e345418e-4536-4f31-a34b-35c1f19099b3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>04\homework04.py</StartupFile>
+    <StartupFile>07\homework07.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -70,6 +70,7 @@
     <Content Include="10\README.md" />
     <Content Include="README.md" />
     <Content Include="09\README.md" />
+    <Content Include="TODO\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01\" />
@@ -82,6 +83,7 @@
     <Folder Include="08\" />
     <Folder Include="09\" />
     <Folder Include="10\" />
+    <Folder Include="TODO\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
