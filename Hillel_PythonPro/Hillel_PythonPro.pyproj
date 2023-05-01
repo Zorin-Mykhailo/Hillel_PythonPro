@@ -25,6 +25,7 @@
     <Compile Include="03\homework03.py" />
     <Compile Include="04\helpers.py" />
     <Compile Include="04\homework04.py" />
+    <Compile Include="07\homework07.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="C:\Users\ZM\.virtualenvs\Hillel_PythonPro-tq4TNkPi\">
@@ -64,6 +65,9 @@
     <Content Include="08\README.md" />
     <Content Include="09\lesson09.md" />
     <Content Include="09\notes09.md" />
+    <Content Include="10\lesson10.md" />
+    <Content Include="10\notes10.md" />
+    <Content Include="10\README.md" />
     <Content Include="README.md" />
     <Content Include="09\README.md" />
   </ItemGroup>
@@ -77,6 +81,7 @@
     <Folder Include="07\" />
     <Folder Include="08\" />
     <Folder Include="09\" />
+    <Folder Include="10\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
