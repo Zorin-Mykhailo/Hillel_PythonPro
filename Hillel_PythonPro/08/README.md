@@ -10,8 +10,8 @@ class Price:
 
 **Acceptance criteria:**
 
-- [ ] If I create 2 instances of a `Price` class I want to do operations between them:
-- [ ] add prices with the same currency
+If I create 2 instances of a `Price` class I want to do operations between them:
+- [ ] `add` prices with the same currency
 - [ ] do a `subtraction` of prices with the same currency
 - [ ] *Additional: operations between prices with different currencies:
 - [ ] If price instances currencies are different I want to do a double conversion

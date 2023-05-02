@@ -28,6 +28,6 @@ except Exception as e:
 **Acceptance criteria:**
 
 - [ ] This code works pretty slowly. Change it using multithreading and multiprocessing as we did in the lesson
-- [ ] Add time counters and uncomment the print command in the try/except block. P.S. Use time.perf_counter.
+- [ ] Add time counters and uncomment the print command in the `try/except` block. **P.S.:** Use `time.perf_counter`.
 - [ ] The encryption could simulate the heavy task. No need to achieve the actual encryption
 - [ ] The image downloader should download the image for real.
