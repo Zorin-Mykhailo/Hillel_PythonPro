@@ -35,7 +35,7 @@ def process_schedule(posts: list[Post], channels: list[SocialChannel]) -> None:
 
 **Acceptance criteria:**
 
-- [ ] **Classes** should be used instead of **tuples** to represent social channels and posts. As a starting point, use the code download for this exercise.
-- [ ] The `post_a_message` function is improved. The `if-statement` has to check for each different type of social network and then call a different method. 
+- [x] **Classes** should be used instead of **tuples** to represent social channels and posts. As a starting point, use the code download for this exercise.
+- [x] The `post_a_message` function is improved. The `if-statement` has to check for each different type of social network and then call a different method. 
 If you want to add support for a new social network, you'll need to add an extra `elif` part, making the code harder and harder to read.
-- [ ] A new version of the code uses abstraction to solve the problem.
+- [x] A new version of the code uses abstraction to solve the problem.
