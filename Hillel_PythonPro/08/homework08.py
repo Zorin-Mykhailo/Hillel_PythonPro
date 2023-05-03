@@ -1,4 +1,4 @@
-from enum import IntEnum
+﻿from enum import IntEnum
 
 
 class Cur(IntEnum):
@@ -12,12 +12,12 @@ class Cur(IntEnum):
         return self.name
 
 
-exchange_rates =  {
-   Cur.USD :  1.0000,
-   Cur.EUR :  0.9114,
-   Cur.UAH : 37.9374,
-   Cur.PLN :  4.1985,
-   Cur.GBP :  0.8299
+exchange_rates = {
+    Cur.USD: 1.0000,
+    Cur.EUR: 0.9114,
+    Cur.UAH: 37.9374,
+    Cur.PLN: 4.1985,
+    Cur.GBP: 0.8299,
 }
 
 
@@ -38,10 +38,19 @@ class Price:
     def currency(self) -> Cur:
         return self.__currency
 
-    @classmethod
     def convert(self, second_currency: Cur) -> "Price":
-        price_in_usd = self if Cur.USD == self.currency else Price(self.amount * exchange_rates[self.currency], Cur.USD)
-        return price_in_usd if second_currency == price_in_usd.currency else Price(price_in_usd.amount / exchange_rates[second_currency], second_currency)
+        price_in_usd = (
+            self
+            if Cur.USD == self.currency
+            else Price(self.amount / exchange_rates[self.currency], Cur.USD)
+        )
+        return (
+            price_in_usd
+            if second_currency == price_in_usd.currency
+            else Price(
+                price_in_usd.amount * exchange_rates[second_currency], second_currency
+            )
+        )
 
     def __add__(self, other):
         if self is None and other is None:
@@ -63,27 +72,14 @@ class Price:
             another = other.convert(self.currency)
         return Price(self.amount - another.amount, self.currency)
 
-
-
     def __str__(self):
-        return f'{self.__amount:0.2f} {self.currency}'
-
+        return f"{self.__amount:0.2f} {self.currency}"
 
 
 def main() -> None:
-    prices = [
-        Price(32.10, Cur.USD),
-        Price(54.32, Cur.EUR),
-        Price(98.76, Cur.UAH)
-    ]
+    print(f"{Price(1.00, Cur.USD) + Price(37.9374, Cur.UAH)}")
+    print(f"{Price(379.374, Cur.UAH) - Price(9.0, Cur.USD)}")
 
-    for p in prices:
-        print(p)
-    
-    print(f'Sum of prices: {Price(10.5, Cur.USD) + Price(4.5, Cur.USD)}')
 
-    phone_price = Price(40.1066, Cur.UAH)
-    print(f'({phone_price}).as_usd = {phone_price.convert(Cur.USD)}')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
