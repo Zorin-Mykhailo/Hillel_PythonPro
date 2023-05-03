@@ -5,9 +5,20 @@ class Cur(IntEnum):
     USD = 1
     EUR = 2
     UAH = 3
+    PLN = 4
+    GBP = 5
 
     def __str__(self):
         return self.name
+
+
+exchange_rates =  {
+   Cur.USD :  1.0000,
+   Cur.EUR :  0.9114,
+   Cur.UAH : 37.9374,
+   Cur.PLN :  4.1985,
+   Cur.GBP :  0.8299
+}
 
 
 class Price:
@@ -28,9 +39,9 @@ class Price:
         return self.__currency
 
     @classmethod
-    def convert(self, currency: Cur) -> "Price":
-        #TODO implement this method
-        return Price(123.45, Cur.USD)
+    def convert(self, second_currency: Cur) -> "Price":
+        price_in_usd = self if Cur.USD == self.currency else Price(self.amount * exchange_rates[self.currency], Cur.USD)
+        return price_in_usd if second_currency == price_in_usd.currency else Price(price_in_usd.amount / exchange_rates[second_currency], second_currency)
 
     def __add__(self, other):
         if self is None and other is None:
@@ -71,7 +82,7 @@ def main() -> None:
     
     print(f'Sum of prices: {Price(10.5, Cur.USD) + Price(4.5, Cur.USD)}')
 
-    phone_price = Price(98.76, Cur.UAH)
+    phone_price = Price(40.1066, Cur.UAH)
     print(f'({phone_price}).as_usd = {phone_price.convert(Cur.USD)}')
 
 if __name__ == '__main__':

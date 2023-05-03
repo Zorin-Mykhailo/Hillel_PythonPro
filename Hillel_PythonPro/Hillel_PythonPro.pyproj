@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Hillel_PythonPro</Name>
     <RootNamespace>Hillel_PythonPro</RootNamespace>
-    <InterpreterId>MSBuild|Hillel_PythonPro-tq4TNkPi|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|Hillel_PythonPro--TrZOL7W|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,10 +29,10 @@
     <Compile Include="08\homework08.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="C:\Users\ZM\.virtualenvs\Hillel_PythonPro-tq4TNkPi\">
-      <Id>Hillel_PythonPro-tq4TNkPi</Id>
+    <Interpreter Include="..\..\..\..\..\.virtualenvs\Hillel_PythonPro--TrZOL7W\">
+      <Id>Hillel_PythonPro--TrZOL7W</Id>
       <Version>3.11</Version>
-      <Description>Hillel_PythonPro-tq4TNkPi (Python 3.11 (64-bit))</Description>
+      <Description>Hillel_PythonPro--TrZOL7W (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
