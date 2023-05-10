@@ -1,0 +1,2 @@
+- [Обзор моделей работы с потоками](https://habr.com/ru/articles/39543/) @habr
+- [Статя Дмитра про конкурентність та паралелізм](https://medium.com/@parfeniukink/python-concurrency-and-parallelism-41af8e76c127)

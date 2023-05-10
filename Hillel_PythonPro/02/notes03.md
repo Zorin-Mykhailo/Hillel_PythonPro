@@ -22,7 +22,7 @@ P:\MyProjects\MySolution> pipenv shell
 В результаті цього створиться папка з віртуальним середовищем, вона як правило розміщується в `C:\Users\<UserName>\.virtualenvs\<SolutionName>-<Hash>`, а також файл `Pipfile` в папці рішення.
 
 8. У Visual Studio вибрати створене середовище в `Solution Explorer` -> `<SolutionName>` -> `<ProjectName>` -> `Python Environments` та за необхідності активувати його (в меню по ПКМ)
-9. За допомогою `pipenv` для встановити (для розробників) пакети `black`, `flake8` та `isort`
+9. За допомогою `pipenv` встановити пакети  `black`, `flake8` та `isort` для розробників
 ```
 P:\MyProjects\MySolution> pipenv install black --dev
 ```
