@@ -1,15 +1,15 @@
-1. Authentication
-  
+1. Authentication    
   1.1. Type??? OAuth???  
   1.2. No password recovery  
   1.3. Auth flow (registration, login, logout)  
   1.4. Password recovery? Maybe...  
-  1.5. Password valodation: NIST (8+, upper, lower, num, special char)
-  
-2. Roles: [User, Manager, Admin(God?)]
+  1.5. Password valodation: NIST (8+, upper, lower, num, special char)    
+2. Roles: [User, Manager, Admin(God?)]  
+3. Users  
+  3.1. Username is unique? :heavy_check_mark: YES  
+  3.2. How do we define the role?  
+  3.3. Do we need a profile?  :heavy_check_mark: YES  
 
-3. Users
-  3.1. Username is unique? :heavy_check_mark:
 
 # Support database relational schema
 
