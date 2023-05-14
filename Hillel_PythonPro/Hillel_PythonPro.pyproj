@@ -70,6 +70,15 @@
     <Content Include="10\lesson10.md" />
     <Content Include="10\notes10.md" />
     <Content Include="10\README.md" />
+    <Content Include="11\lesson11.md" />
+    <Content Include="11\notes11.md" />
+    <Content Include="11\README.md" />
+    <Content Include="12\lesson12.md" />
+    <Content Include="12\notes12.md" />
+    <Content Include="12\README.md" />
+    <Content Include="13\lesson13.md" />
+    <Content Include="13\notes13.md" />
+    <Content Include="13\README.md" />
     <Content Include="README.md" />
     <Content Include="09\README.md" />
     <Content Include="TODO\README.md" />
@@ -85,6 +94,9 @@
     <Folder Include="08\" />
     <Folder Include="09\" />
     <Folder Include="10\" />
+    <Folder Include="11\" />
+    <Folder Include="12\" />
+    <Folder Include="13\" />
     <Folder Include="TODO\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
