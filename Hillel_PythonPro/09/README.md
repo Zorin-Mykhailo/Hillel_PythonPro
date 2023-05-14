@@ -1,4 +1,4 @@
-# [Homework 09 •  Multithreading & multiprocessing](https://lms.ithillel.ua/groups/63c0179f2482232c29371552/homeworks/644acea3575d173dec1cbf39)
+# [Homework 09 • Multithreading & multiprocessing](https://lms.ithillel.ua/groups/63c0179f2482232c29371552/homeworks/644acea3575d173dec1cbf39)
 
 ```python
 import time
