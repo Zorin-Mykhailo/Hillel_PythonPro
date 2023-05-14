@@ -38,6 +38,12 @@ erDiagram
     Int32 CurrentManagerId
     Int32 StatusId
     Int32 VisibilityId
+    Int32 CategoryId
+  }
+  
+  RequestCategory {
+    Int32 Id PK
+    String Title
   }
   
   Message {
@@ -48,14 +54,16 @@ erDiagram
     String Text "❓ max len = 200"
   }
   
-  Request ||--|{ Message : "Message.RequestId = Request.Id"
+  RequestCategory ||--|| Request : "Request.CategoryId = RequestCategory.Id"
   Request ||--|| RequestStatus : "Request.StatusId = RequestStatus.Id"
   Request ||--|| RequestVisibility : "Request.VisibilityId = RequestVisibility.Id"
+  Request ||--|{ Message : "Message.RequestId = Request.Id"
   Request ||--|| User : "Request.AuthorId = User.Id"
   Request ||--|| User : "Request.CurrentManagerId = User.Id"
+  
   Message ||--|| User : "Message.AuthorId = User.Id"
-  User }|--|{ UserRole : has
-  User ||--|| UserSequrity : has  
+  User }|--|{ UserRole : "Many to many"
+  User ||--|| UserSequrity : "UserSequrity.UserId = User.Id"  
   
 ```
 
@@ -64,6 +72,7 @@ erDiagram
 | Id | Title |
 | ---: | --- |
 | 1 | New |
+| 2 | NotStarted |
 | 10 | InProgress |
 | 20 | Finished |
 | 21 | Canceled |
@@ -74,6 +83,13 @@ erDiagram
 | ---: | --- |
 | 1 | Public |
 | 10 | Private |
+
+**UserRole content:**
+| Id | Title |
+| ---: | --- |
+| 1 | User |
+| 2 | Manager |
+| 2 | Admin |
 ---
 
 
