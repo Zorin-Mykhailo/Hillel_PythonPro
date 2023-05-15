@@ -67,6 +67,7 @@
     <Content Include="08\README.md" />
     <Content Include="09\lesson09.md" />
     <Content Include="09\notes09.md" />
+    <Content Include="10\homework10.py" />
     <Content Include="10\lesson10.md" />
     <Content Include="10\notes10.md" />
     <Content Include="10\README.md" />
