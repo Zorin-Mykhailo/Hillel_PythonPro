@@ -22,8 +22,7 @@ async def main():
             tasks.append(httpClient.get(request))
         responses = await asyncio.gather(*tasks)
         
-        for response in responses:
-            
+        for response in responses:            
             json = response.json()
             if 'Realtime Currency Exchange Rate' not in json:
                 continue

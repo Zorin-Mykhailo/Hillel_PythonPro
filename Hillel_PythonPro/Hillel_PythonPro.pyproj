@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e345418e-4536-4f31-a34b-35c1f19099b3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>10\test.py</StartupFile>
+    <StartupFile>10\homework10.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,6 +28,7 @@
     <Compile Include="07\homework07.py" />
     <Compile Include="08\homework08.py" />
     <Compile Include="09\homework09.py" />
+    <Compile Include="10\other.py" />
     <Compile Include="10\test.py" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,12 @@
     <Content Include="14\lesson14.md" />
     <Content Include="14\notes14.md" />
     <Content Include="14\README.MD" />
+    <Content Include="15\lesson15.md" />
+    <Content Include="15\notes15.md" />
+    <Content Include="15\README.md" />
+    <Content Include="16\lesson16.md" />
+    <Content Include="16\notes16.md" />
+    <Content Include="16\README.md" />
     <Content Include="README.md" />
     <Content Include="09\README.md" />
     <Content Include="TODO\README.md" />
@@ -104,6 +111,8 @@
     <Folder Include="12\" />
     <Folder Include="13\" />
     <Folder Include="14\" />
+    <Folder Include="15\" />
+    <Folder Include="16\" />
     <Folder Include="TODO\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

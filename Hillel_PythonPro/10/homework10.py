@@ -22,7 +22,8 @@ class ExchangeRates:
         self.data = {}
         #self.data: dict = self._fetch_from_api()
 
-        asyncio.run(self.get_rates())
+        asyncio.run(self._obtain_rates())
+        #_get_rates(api_key, courses)
 
         ExchangeRates._initialized = True
 
@@ -39,8 +40,35 @@ class ExchangeRates:
     #     response = requests.get(url)
     #     return response.json()["5. Exchange rate"]
 
-    @staticmethod
-    async def get_rates(api_key: str, courses: list[tuple[str, str]]) -> None:
+
+
+    async def _obtain_rates(self) -> None:
+    #async def _obtain_rates(self, api_key: str, courses: list[tuple[str, str]]) -> None:
+        api_key = '06EXQ0JZFVLO6RZA'
+        courses = [
+            ('USD', 'UAH'),
+            ('EUR', 'UAH'),
+            ('GBP', 'UAH')
+        ]
+
+        async with httpx.AsyncClient() as httpClient:
+            tasks = []
+            for course in courses:
+                request = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={course[0]}&to_currency={course[1]}&apikey={api_key}"
+                tasks.append(httpClient.get(request))
+            responses = await asyncio.gather(*tasks)
+        
+            for response in responses:            
+                json = response.json()
+                if 'Realtime Currency Exchange Rate' not in json:
+                    continue
+                res = response.json()['Realtime Currency Exchange Rate']
+                result = (res['1. From_Currency Code'], res['3. To_Currency Code'], res['5. Exchange Rate'])
+                self.data.append(result)
+                #print(f'1 {result[0]} = {result[2]} {result[1]}')
+
+
+    async def _get_rates(self, api_key: str, courses: list[(str, str)]) -> None:
         async with httpx.AsyncClient() as httpClient:
             tasks = []
             for course in courses:
@@ -48,39 +76,19 @@ class ExchangeRates:
                 tasks.append(httpClient.get(request))
             responses = await asyncio.gather(*tasks)
             for response in responses:
+                print(response)
 
             self.data = [response.json() for response in responses]
 
-er = ExchangeRates('06EXQ0JZFVLO6RZA', None)
-# er = object.__new__(ExchangeRates)
-# er <= ExchangeRages.__init__() <= ExchangeRates.__new__()
-
-
-print(er.data)
-# er2 = ExchangeRates()
-# er2 = ExchangeRates()
-# er2 = ExchangeRates()
-# er2 = ExchangeRates()
-# er2 = ExchangeRates()
-# print(er2.data)
-
 async def main(api_key: str, courses: list[tuple[str, str]]):
-    print(f'{api_key=}')
-    print(f'{courses=}')
-    return
-    async with asyncio.TaskGroup() as tg:
-        
-        task1 = tg.create_task(...)
-        task2 = tg.create_task(...)
-    print("all tasks have completed now.")
+    exchangeRates = ExchangeRates(api_key, courses)
+
 
 if __name__ == '__main__':
     api_key = '06EXQ0JZFVLO6RZA'
     courses = [
         ('USD', 'UAH'),
         ('EUR', 'UAH'),
-        ('UAH', 'UAH'),
-        ('PLN', 'UAH'),
         ('GBP', 'UAH')
     ]
 
