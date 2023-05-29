@@ -55,5 +55,5 @@ print(er.data)
 
 
 **Acceptance criteria:**
-- [ ] Now all requests to the external API are making async calls.
+- [x] Now all requests to the external API are making async calls.
 - [x] The `httpx` library is used ([DOCUMENTATION](https://www.python-httpx.org/async/))
